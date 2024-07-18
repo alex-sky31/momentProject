@@ -4,48 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6ec4f30-bcf1-4737-83ba-7b799f9ffbcd" name="Changes" comment="feat(): fix front end&#10;&#10;add docker">
-      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend-app/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-app/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-app/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-app/postcss.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-app/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-app/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-app/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-app/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-app/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-app/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-app/src/App.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-app/src/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-app/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-app/src/react-app-env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-app/src/reportWebVitals.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-app/src/setupTests.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-app/tailwind.config.js" afterDir="false" />
+    <list default="true" id="a6ec4f30-bcf1-4737-83ba-7b799f9ffbcd" name="Changes" comment="feat(): add docker file">
+      <change afterPath="$PROJECT_DIR$/frontend-app/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-app/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-app/src/icons/EyeIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-app/src/icons/EyeSlashIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-app/src/icons/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-app/src/pages/homePage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-app/src/pages/loginPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-app/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend-app/src/app.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-app/src/app.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend-app/src/app.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-app/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend-app/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-app/.eslintrc.cjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-app/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-app/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-app/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-app/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-app/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-app/public/vite.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-app/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-app/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-app/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-app/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-app/src/assets/react.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-app/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-app/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-app/src/main.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-app/src/vite-env.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-app/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-app/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-app/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-app/tsconfig.node.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-app/vite.config.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,18 +54,25 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/alexcourbon/Desktop/Data/momentProject/frontend-app/src/icons",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/alexcourbon/Desktop/Data/momentProject/backend-app/node_modules/prettier",
+    "prettierjs.PrettierConfiguration.Package": "/Users/alexcourbon/Desktop/Data/momentProject/frontend-app/node_modules/prettier",
     "settings.editor.selected.configurable": "settings.javascript.prettier",
     "ts.external.directory.path": "/Users/alexcourbon/Desktop/Data/momentProject/backend-app/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend-app/src/icons" />
+      <recent name="$PROJECT_DIR$/frontend-app" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend-app" />
       <recent name="$PROJECT_DIR$" />
@@ -117,8 +97,25 @@
       <workItem from="1721325222409" duration="7000" />
       <workItem from="1721325380952" duration="9000" />
       <workItem from="1721325448446" duration="1804000" />
-      <workItem from="1721327523350" duration="6223000" />
+      <workItem from="1721327523350" duration="7838000" />
     </task>
+    <task id="LOCAL-00001" summary="feat(): fix front end&#10;&#10;add docker">
+      <option name="closed" value="true" />
+      <created>1721334902389</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1721334902389</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat(): add docker file">
+      <option name="closed" value="true" />
+      <created>1721334973929</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1721334973929</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +123,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat(): fix front end&#10;&#10;add docker" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(): fix front end&#10;&#10;add docker" />
+    <MESSAGE value="feat(): add docker file" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(): add docker file" />
   </component>
 </project>
