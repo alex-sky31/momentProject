@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6ec4f30-bcf1-4737-83ba-7b799f9ffbcd" name="Changes" comment="" />
+    <list default="true" id="a6ec4f30-bcf1-4737-83ba-7b799f9ffbcd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/backend/backend-app/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend-app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend-app/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend-app/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend-app/nest-cli.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend-app/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend-app/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend-app/src/app.controller.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend-app/src/app.controller.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend-app/src/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend-app/src/app.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend-app/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend-app/test/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend-app/test/jest-e2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend-app/tsconfig.build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend-app/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend-app/.eslintrc.cjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend-app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend-app/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend-app/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend-app/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend-app/public/vite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend-app/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend-app/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend-app/src/assets/react.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend-app/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend-app/src/main.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend-app/src/vite-env.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend-app/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend-app/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend-app/tsconfig.node.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend-app/vite.config.ts" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,25 +49,25 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2jQhUCLaMvojqYjrz0jC1HVQlzj" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -44,6 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1721325221279</updated>
       <workItem from="1721325222409" duration="7000" />
+      <workItem from="1721325380952" duration="9000" />
     </task>
     <servers />
   </component>
