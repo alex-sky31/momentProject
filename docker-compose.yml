@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: ./backend-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      - NODE_ENV=production
+
+  frontend:
+    build:
+      context: ./frontend-app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: moment
+    ports:
+      - "5432:5432"
