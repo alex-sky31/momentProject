@@ -1,3 +1,4 @@
+/*
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from '../modules/users/entities/User.entity';
@@ -15,7 +16,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
         username: configService.get<string>('DB_USERNAME'),
         password: configService.get<string>('DB_PASSWORD'),
         database: configService.get<string>('DB_DATABASE'),
-        migrations: ['dist/migrations/*{.ts,.js}'],
+        migrations: ['dist/migrations/!*{.ts,.js}'],
         migrationsTableName: 'migrations_typeorm',
         migrationsRun: true,
         entities: [User],
@@ -26,3 +27,4 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
   ],
 })
 export class DatabaseModule {}
+*/

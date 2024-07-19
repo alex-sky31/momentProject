@@ -34,7 +34,7 @@ function App() {
       errorElement: <div>Error</div>,
       children: [
         {
-          path: '/dashboard',
+          path: '/home',
           element: <HomePage />,
           errorElement: <div>Error</div>
         }

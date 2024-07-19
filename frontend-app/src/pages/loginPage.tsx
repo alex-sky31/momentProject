@@ -1,12 +1,40 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { EyeIcon, EyeSlashIcon } from '../icons';
 import { Formik, Field, Form } from 'formik';
+import { userService } from '../API/user/User.service';
+import { toast } from 'react-toastify';
+import { useRecoilValue } from 'recoil';
+import { userStore } from '../stores/UserStore.atom';
+import { User } from '../@types/User.type';
+import useAuth from '../hooks/useAuth';
+import { useNavigate } from 'react-router-dom';
 export const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const user = useRecoilValue<User | undefined>(userStore);
 
+  const { setAuth } = useAuth();
+
+  const navigate = useNavigate();
   const login = async (values: any) => {
     console.log(values);
+    await userService.login(values).then((res) => {
+      if (res.status === 201) {
+        if (res.data?.code === 400) {
+          toast.error('Email ou mots de passe invalide');
+        } else {
+          toast.success('Connexion réussie');
+          setAuth(res.data.access_token);
+          navigate('/home');
+        }
+      }
+    });
   };
+
+  useEffect(() => {
+    if (user) {
+      navigate('/home');
+    }
+  }, [user]);
 
   return (
     <div className="min-h-screen min-w-screen">
