@@ -6,6 +6,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './modules/users/entities/user.entity';
 import { UserModule } from './modules/users/user.module';
+import { Task } from './modules/tasks/entities/task.entity';
+import { TaskModule } from './modules/tasks/task.module';
 
 @Module({
   imports: [
@@ -22,12 +24,13 @@ import { UserModule } from './modules/users/user.module';
         migrations: ['dist/migrations/*{.ts,.js}'],
         migrationsTableName: 'migrations_typeorm',
         migrationsRun: true,
-        entities: [User],
+        entities: [User, Task],
         synchronize: false, // false en production pour éviter les pertes de données accidentals
       }),
       inject: [ConfigService],
     }),
     UserModule,
+    TaskModule,
     AuthModule,
   ],
   controllers: [AppController],

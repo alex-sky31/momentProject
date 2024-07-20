@@ -15,7 +15,7 @@ const AuthContext = createContext({});
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [auth, setAuth] = useState(() => {
     const storedAuth = localStorage.getItem('auth');
-    return storedAuth && true ? JSON.parse(storedAuth) : null;
+    return storedAuth ? JSON.parse(storedAuth) : null;
   });
 
   const setUser = useSetRecoilState<User | undefined>(userStore);
@@ -32,6 +32,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         console.error('Error fetching data:', error);
       }
     };
+
     if (auth) {
       fetchData();
     }

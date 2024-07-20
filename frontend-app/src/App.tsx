@@ -9,8 +9,8 @@ import './App.css';
 
 import RequireAuth from './components/RequireAuth';
 import { AuthProvider } from './context/AuthProvider';
-import { HomePage } from './pages/homePage';
-import { LoginPage } from './pages/loginPage';
+import { HomePage } from './pages/homePage/HomePage';
+import { LoginPage } from './pages/loginPage/LoginPage';
 
 function App() {
   const router = createBrowserRouter([
