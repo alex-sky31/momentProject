@@ -1,4 +1,4 @@
-type Status = 'todo' | 'inprogress' | 'done';
+export type Status = 'todo' | 'inprogress' | 'done';
 
 export interface Task {
   createdAt: string;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { taskValidationSchemaUtils } from '../utils/taskValidationSchema.utils';
 import { taskService } from '../../../API/task/Task.service';
@@ -7,13 +7,34 @@ import { useRecoilValue } from 'recoil';
 import { User } from '../../../@types/User.type';
 import { userStore } from '../../../stores/UserStore.atom';
 import { toast } from 'react-toastify';
+import { Status, Task } from '../../../@types/Task.type';
 
-const TaskForm: React.FC = () => {
+interface FormProps {
+  taskId?: string;
+}
+
+const TaskForm: React.FC<FormProps> = ({ taskId }) => {
   const user = useRecoilValue<User | undefined>(userStore);
+  const [task, setTask] = useState<Task>();
 
   const handleSubmit = async (values: TaskFormValues) => {
     try {
-      if (user) {
+      if (task) {
+        await taskService
+          .updateTask({
+            createdAt: task.createdAt,
+            title: values.title,
+            status: values.status as Status,
+            text: values.text,
+            id: task.id
+          })
+          .then((res) => {
+            if (res.status === 200) {
+              toast.success('Votre tache à bien était mise a jour');
+              location.reload();
+            }
+          });
+      } else if (user) {
         await taskService.createTask({ ...values, userId: user.id }).then((res) => {
           if (res.status === 201) {
             toast.success('Votre tache à bien était créer');
@@ -23,14 +44,25 @@ const TaskForm: React.FC = () => {
       }
     } catch (e) {
       toast.error(`Une erreur c'est produit`);
-      console.log();
+      console.error(e);
     }
   };
 
+  useEffect(() => {
+    const fetchData = async (taskId: string) => {
+      const tmp = await taskService.getTask(taskId);
+      setTask(tmp.data);
+    };
+
+    if (taskId) {
+      fetchData(taskId);
+    }
+  }, [taskId]);
+
   const initialValues: TaskFormValues = {
-    status: '',
-    title: '',
-    text: ''
+    status: task?.status || '',
+    title: task?.title || '',
+    text: task?.status || ''
   };
 
   return (
@@ -38,7 +70,8 @@ const TaskForm: React.FC = () => {
       <Formik
         initialValues={initialValues}
         validationSchema={taskValidationSchemaUtils}
-        onSubmit={handleSubmit}>
+        onSubmit={handleSubmit}
+        enableReinitialize={true}>
         <Form>
           <div className="mb-4 space-y-3">
             <label htmlFor="title" className="block text-gray-700 text-sm ">

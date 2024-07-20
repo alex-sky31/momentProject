@@ -1,9 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { DeepPartial, DeleteResult, Repository } from 'typeorm';
+import { DeleteResult, Repository, UpdateResult } from 'typeorm';
 import { Task } from './entities/task.entity';
 import { CreateTaskDto } from './dto/createTask.dto';
 import { UserService } from '../users/user.service';
+import { UpdateTaskDto } from './dto/UpdateTask.dto';
 
 @Injectable()
 export class TaskService {
@@ -19,6 +20,11 @@ export class TaskService {
 
   async findOne(id: string): Promise<Task> {
     return await this.taskRepository.findOne({ where: { id } });
+  }
+
+  async update(data: UpdateTaskDto, id: string): Promise<UpdateResult> {
+    console.log(data);
+    return await this.taskRepository.update(id, data);
   }
   async create(data: CreateTaskDto): Promise<Task> {
     const user = await this.userService.findOne(data.userId);

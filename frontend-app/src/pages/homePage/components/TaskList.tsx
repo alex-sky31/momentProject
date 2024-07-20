@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Task } from '../../../@types/Task.type';
 import { TrashIcon } from '../../../icons/TrashIcon';
 import classNames from 'classnames';
+import Modal from '../../../components/Moal';
+import TaskForm from './TaskForm';
+import { InfoIcon } from '../../../icons/InfoIcon';
 
 interface TaskListProps {
   sortedTasks: Task[];
@@ -11,9 +14,23 @@ interface TaskListProps {
 }
 
 const TaskList: React.FC<TaskListProps> = ({ sortedTasks, handleDelete, title }) => {
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [selectedTaskId, setSelectedTaskId] = useState('');
+
+  const closeModal = () => setModalOpen(false);
+
+  const openModal = (id: string) => {
+    setModalOpen(true);
+    setSelectedTaskId(id);
+  };
   return (
-    <div className="flex flex-col w-[350px] h-auto rounded-xl bg-[#F3F5F6] p-2 gap-y-2">
-      <span>{title}</span>
+    <div className="flex flex-col w-[350px] h-auto rounded-xl bg-[#F3F5F6] p-2 gap-y-2 overflow-y-auto max-h-[500px]">
+      <Modal isOpen={isModalOpen} onClose={closeModal} title="Ajouter une tache">
+        <TaskForm taskId={selectedTaskId} />
+      </Modal>
+      <div className="flex justify-between">
+        <span>{title}</span> <span>{sortedTasks.length}</span>
+      </div>
       {sortedTasks?.map((task, index) => (
         <div
           id="taskCard"
@@ -21,9 +38,14 @@ const TaskList: React.FC<TaskListProps> = ({ sortedTasks, handleDelete, title })
           key={index}>
           <span className="text-lg font-semibold flex justify-between items-center">
             {task.title}
-            <span onClick={() => handleDelete(task.id)} className="cursor-pointer">
-              <TrashIcon />
-            </span>
+            <div className="flex gap-x-2">
+              <span onClick={() => openModal(task.id)} className="cursor-pointer">
+                <InfoIcon />
+              </span>
+              <span onClick={() => handleDelete(task.id)} className="cursor-pointer">
+                <TrashIcon />
+              </span>
+            </div>
           </span>
           <div className="flex justify-between">
             <span className="text-sm opacity-50">{task.id.split('-')[0]}</span>
@@ -39,7 +61,7 @@ const TaskList: React.FC<TaskListProps> = ({ sortedTasks, handleDelete, title })
               {task.status}
             </span>
           </div>
-          <p>{task.text}</p>
+          <p className="hidden md:block">{task.text}</p>
         </div>
       ))}
     </div>

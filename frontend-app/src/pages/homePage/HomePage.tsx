@@ -20,17 +20,17 @@ export const HomePage = () => {
   const { setAuth } = useAuth();
   const setUser = useSetRecoilState<User | undefined>(userStore);
   const navigate = useNavigate();
-
+  const fetchData = async () => {
+    const tmp = await taskService.getTasks();
+    setTask(tmp.data);
+  };
   useEffect(() => {
-    const fetchData = async () => {
-      const tmp = await taskService.getTasks();
-      setTask(tmp.data);
-    };
     fetchData();
   }, [refresh]);
 
   const sortedTasks = sortedTasksUtils(tasks);
   const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
 
   const handelDelete = async (taskId: string) => {
     try {
@@ -45,7 +45,6 @@ export const HomePage = () => {
       console.error(error);
     }
   };
-  const closeModal = () => setModalOpen(false);
   const handleLogout = async () => {
     try {
       setAuth(null);
@@ -58,7 +57,7 @@ export const HomePage = () => {
   };
 
   return (
-    <div className="min-h-screen min-w-screen relative">
+    <div className="md:min-h-screen md:min-w-screen w-full h-screen relative pb-2.5">
       <div className="min-h-screen min-w-screen absolute top-0 inset-0 -z-10 overflow-hidden">
         <img
           src="https://cdn.shopify.com/s/files/1/0668/7870/1809/files/Codress-Background2.jpg?v=1717063244"
@@ -66,18 +65,22 @@ export const HomePage = () => {
           className="w-full object-cover h-full "
         />
       </div>
-      <header className="h-12 flex flex-row justify-between items-center px-10 border-b bg-white bg-gradient-to-r relative z-40">
-        Home Page <button onClick={handleLogout}>LogOut</button>
+      <header className="h-12 flex flex-row justify-between items-center md:px-10 px-2 z-40 relative bg-white opacity-50 backdrop-blur-sm">
+        Gestion des Taches
+        <button onClick={handleLogout} className="hover:outline rounded-full text-sm px-1">
+          Se déconnecter
+        </button>
       </header>
-      <div className="overflow-y-auto w-full flex flex-col pt-10 px-20">
-        <div className="flex w-full justify-between ">
-          <span>Taches</span>
-          <button onClick={openModal}>Ajouter une nouvelle tache</button>
+      <div className="w-full flex flex-col pt-10 md:px-20">
+        <div className="flex w-full justify-between md:flex-row flex-col p-2.5">
+          <span className="flex text-white items-center p-2.5 text-3xl">Vos taches</span>
+          <button
+            onClick={openModal}
+            className="md:px-10 px-2 py-2 relative bg-white bg-opacity-50 hover:backdrop-blur-sm rounded transition-all ease-in delay-100">
+            Ajouter une nouvelle tache
+          </button>
         </div>
-        <Modal isOpen={isModalOpen} onClose={closeModal} title="Ajouter une tache">
-          <TaskForm />
-        </Modal>
-        <div className="flex flex-row gap-x-2 justify-center items-start w-full ">
+        <div className="flex md:flex-row gap-x-2 justify-center md:items-start items-center w-full h-1/2 flex-col gap-y-2">
           <TaskList title="To do" sortedTasks={sortedTasks.todo} handleDelete={handelDelete} />
           <TaskList
             title="In progress"
@@ -87,6 +90,9 @@ export const HomePage = () => {
           <TaskList title="Done" sortedTasks={sortedTasks.done} handleDelete={handelDelete} />
         </div>
       </div>
+      <Modal isOpen={isModalOpen} onClose={closeModal} title="Ajouter une tache">
+        <TaskForm />
+      </Modal>
     </div>
   );
 };
