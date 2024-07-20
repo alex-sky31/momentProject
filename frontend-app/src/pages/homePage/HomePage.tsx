@@ -9,7 +9,7 @@ import TaskForm from './components/TaskForm';
 import { taskService } from '../../API/task/Task.service';
 import { toast } from 'react-toastify';
 import { Task } from '../../@types/Task.type';
-import { sortedTasksUtils } from './utils/SortTasks.utils';
+import { sortedTasksUtils } from './utils/sortTasks.utils';
 import TaskList from './components/TaskList';
 
 export const HomePage = () => {

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { EyeIcon, EyeSlashIcon } from '../../icons';
+import { EyeIcon, EyeSlashIcon } from '../../assets/icons';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import { userService } from '../../API/user/User.service';
 import { toast } from 'react-toastify';

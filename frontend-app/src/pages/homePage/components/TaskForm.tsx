@@ -62,7 +62,7 @@ const TaskForm: React.FC<FormProps> = ({ taskId }) => {
   const initialValues: TaskFormValues = {
     status: task?.status || '',
     title: task?.title || '',
-    text: task?.status || ''
+    text: task?.text || ''
   };
 
   return (
@@ -75,7 +75,7 @@ const TaskForm: React.FC<FormProps> = ({ taskId }) => {
         <Form>
           <div className="mb-4 space-y-3">
             <label htmlFor="title" className="block text-gray-700 text-sm ">
-              Title
+              Titre
             </label>
             <Field
               type="text"
@@ -88,7 +88,7 @@ const TaskForm: React.FC<FormProps> = ({ taskId }) => {
 
           <div className="mb-4">
             <label htmlFor="status" className="block text-gray-700">
-              Status
+              Statut
             </label>
             <Field
               as="select"
@@ -120,7 +120,7 @@ const TaskForm: React.FC<FormProps> = ({ taskId }) => {
             <button
               type="submit"
               className="w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
-              Create Task
+              {!taskId ? 'Ajouter' : 'Sauvegarder'}
             </button>
           </div>
         </Form>

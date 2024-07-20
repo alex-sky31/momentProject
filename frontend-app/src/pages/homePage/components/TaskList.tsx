@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { Task } from '../../../@types/Task.type';
-import { TrashIcon } from '../../../icons/TrashIcon';
 import classNames from 'classnames';
 import Modal from '../../../components/Moal';
 import TaskForm from './TaskForm';
-import { InfoIcon } from '../../../icons/InfoIcon';
+import { InfoIcon, TrashIcon } from '../../../assets/icons';
 
 interface TaskListProps {
   sortedTasks: Task[];
@@ -34,7 +33,7 @@ const TaskList: React.FC<TaskListProps> = ({ sortedTasks, handleDelete, title })
       {sortedTasks?.map((task, index) => (
         <div
           id="taskCard"
-          className="flex w-full h-[120px] bg-white rounded p-2 flex-col space-y-2"
+          className="flex w-full min-h-[120px] max-h-[380px] h-auto bg-white rounded p-2 flex-col space-y-2"
           key={index}>
           <span className="text-lg font-semibold flex justify-between items-center">
             {task.title}

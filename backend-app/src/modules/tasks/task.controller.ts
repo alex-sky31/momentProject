@@ -11,8 +11,7 @@ import {
 } from '@nestjs/common';
 import { AuthGuard } from '../auth/auth.guard';
 import { TaskService } from './task.service';
-import { CreateTaskDto } from './dto/createTask.dto';
-import { UpdateTaskDto } from './dto/UpdateTask.dto';
+import { CreateTaskDto, UpdateTaskDto } from './dto';
 
 @Controller('tasks')
 export class TaskController {

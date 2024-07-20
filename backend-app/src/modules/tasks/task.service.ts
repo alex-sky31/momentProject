@@ -2,9 +2,8 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { DeleteResult, Repository, UpdateResult } from 'typeorm';
 import { Task } from './entities/task.entity';
-import { CreateTaskDto } from './dto/createTask.dto';
+import { CreateTaskDto, UpdateTaskDto } from './dto';
 import { UserService } from '../users/user.service';
-import { UpdateTaskDto } from './dto/UpdateTask.dto';
 
 @Injectable()
 export class TaskService {
@@ -23,7 +22,6 @@ export class TaskService {
   }
 
   async update(data: UpdateTaskDto, id: string): Promise<UpdateResult> {
-    console.log(data);
     return await this.taskRepository.update(id, data);
   }
   async create(data: CreateTaskDto): Promise<Task> {
