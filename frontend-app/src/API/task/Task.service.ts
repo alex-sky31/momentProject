@@ -4,8 +4,8 @@ import { Task } from '../../@types/Task.type';
 const base_url = 'http://localhost:8080';
 
 export const taskService = {
-  async getTasks() {
-    return axiosInstance.get(`${base_url}/tasks/`);
+  async getTasks(userId: string) {
+    return axiosInstance.get(`${base_url}/tasks/${userId}`);
   },
   async getTask(id: string) {
     return axiosInstance.get(`${base_url}/tasks/${id}`);

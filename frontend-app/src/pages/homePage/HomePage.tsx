@@ -1,5 +1,5 @@
 import useAuth from '../../hooks/useAuth';
-import { useSetRecoilState } from 'recoil';
+import { useRecoilState } from 'recoil';
 import { User } from '../../@types/User.type';
 import { userStore } from '../../stores/UserStore.atom';
 import { useNavigate } from 'react-router-dom';
@@ -11,6 +11,7 @@ import { toast } from 'react-toastify';
 import { Task } from '../../@types/Task.type';
 import { sortedTasksUtils } from './utils/sortTasks.utils';
 import TaskList from './components/TaskList';
+import Background from '../../assets/backGround.png';
 
 export const HomePage = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -18,15 +19,17 @@ export const HomePage = () => {
   const [refresh, setRefresh] = useState<boolean>(false);
 
   const { setAuth } = useAuth();
-  const setUser = useSetRecoilState<User | undefined>(userStore);
+  const [user, setUser] = useRecoilState<User | undefined>(userStore);
   const navigate = useNavigate();
-  const fetchData = async () => {
-    const tmp = await taskService.getTasks();
+  const fetchData = async (userId: string) => {
+    const tmp = await taskService.getTasks(userId);
     setTask(tmp.data);
   };
   useEffect(() => {
-    fetchData();
-  }, [refresh]);
+    if (user) {
+      fetchData(user.id);
+    }
+  }, [refresh, user]);
 
   const sortedTasks = sortedTasksUtils(tasks);
   const openModal = () => setModalOpen(true);
@@ -59,11 +62,7 @@ export const HomePage = () => {
   return (
     <div className="md:min-h-screen md:min-w-screen w-full h-screen relative pb-2.5">
       <div className="min-h-screen min-w-screen absolute top-0 inset-0 -z-10 overflow-hidden">
-        <img
-          src="https://cdn.shopify.com/s/files/1/0668/7870/1809/files/Codress-Background2.jpg?v=1717063244"
-          alt="logo"
-          className="w-full object-cover h-full "
-        />
+        <img src={Background} alt="logo" className="w-full object-cover h-full " />
       </div>
       <header className="h-12 flex flex-row justify-between items-center md:px-10 px-2 z-40 relative bg-white opacity-50 backdrop-blur-sm">
         Gestion des Taches

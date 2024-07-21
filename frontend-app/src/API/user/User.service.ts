@@ -13,7 +13,7 @@ export const userService = {
     return axiosInstance.get(`${base_url}/auth/user/${userId}`);
   },
 
-  async register(data: { firstName: string; lastName: string; email: string; password: string }) {
+  async register(data: { firstName?: string; lastName?: string; email: string; password: string }) {
     return axios.post(`${base_url}/auth/register`, data);
   }
 };

@@ -9,7 +9,9 @@ import { User } from '../../@types/User.type';
 import useAuth from '../../hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
 import Logo from '../../assets/TestLogo.png';
+import Background from '../../assets/backGround.png';
 import { validationSchema } from './utils/validationSchema.utils';
+import { LoginFormValue } from '../../@types/LoginFormValue.type';
 
 export const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -20,13 +22,13 @@ export const LoginPage = () => {
   const { setAuth } = useAuth();
 
   const navigate = useNavigate();
-  const login = async (values: any) => {
+  const login = async (values: LoginFormValue) => {
     try {
       if (registerForm) {
-        console.log('icic');
-        console.log(values);
         await userService.register(values).then((res) => {
-          console.log(res);
+          if (res.status === 201) {
+            toast.success('Votre compte a bien été créé. Veuillez vous connecter');
+          }
         });
       } else {
         await userService.login(values).then((res) => {
@@ -199,7 +201,7 @@ export const LoginPage = () => {
 
       <div className="w-full p-7 h-auto">
         <img
-          src="https://cdn.shopify.com/s/files/1/0668/7870/1809/files/Codress-Background2.jpg?v=1717063244"
+          src={Background}
           alt="logo"
           className="md:w-full md:h-full object-cover rounded-xl sm:w-full sm:h-auto"
         />
