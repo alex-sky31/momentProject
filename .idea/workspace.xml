@@ -4,25 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6ec4f30-bcf1-4737-83ba-7b799f9ffbcd" name="Changes" comment="fix(): path import update">
-      <change afterPath="$PROJECT_DIR$/backend-app/src/modules/password/password.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend-app/src/modules/password/password.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-app/src/@types/LoginFormValue.type.ts" afterDir="false" />
+    <list default="true" id="a6ec4f30-bcf1-4737-83ba-7b799f9ffbcd" name="Changes" comment="feat(): password hash">
+      <change afterPath="$PROJECT_DIR$/backend-app/.dockerignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-app/src/modules/auth/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend-app/src/modules/auth/auth.guard.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-app/src/modules/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend-app/src/modules/auth/auth.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-app/src/modules/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend-app/src/modules/auth/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-app/src/modules/tasks/task.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend-app/src/modules/tasks/task.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-app/src/modules/tasks/task.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend-app/src/modules/tasks/task.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-app/src/modules/users/user.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend-app/src/modules/users/user.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-app/src/modules/users/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend-app/src/modules/users/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-app/src/API/task/Task.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-app/src/API/task/Task.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-app/src/API/user/User.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-app/src/API/user/User.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-app/src/assets/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-app/src/assets/background.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-app/src/pages/homePage/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-app/src/pages/homePage/HomePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-app/src/pages/loginPage/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-app/src/pages/loginPage/LoginPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +94,7 @@
       <workItem from="1721327523350" duration="10656000" />
       <workItem from="1721393333857" duration="6669000" />
       <workItem from="1721408509059" duration="32769000" />
-      <workItem from="1721590200158" duration="993000" />
+      <workItem from="1721590200158" duration="2417000" />
     </task>
     <task id="LOCAL-00001" summary="feat(): fix front end&#10;&#10;add docker">
       <option name="closed" value="true" />
@@ -184,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721508058328</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat(): password hash">
+      <option name="closed" value="true" />
+      <created>1721591335166</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1721591335166</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +192,7 @@
     <MESSAGE value="fix(): docker-compose build faile back env path" />
     <MESSAGE value="feat(): add update and delete task" />
     <MESSAGE value="fix(): path import update" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(): path import update" />
+    <MESSAGE value="feat(): password hash" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(): password hash" />
   </component>
 </project>
