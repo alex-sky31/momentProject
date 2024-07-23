@@ -28,6 +28,7 @@ export const LoginPage = () => {
         await userService.register(values).then((res) => {
           if (res.status === 201) {
             toast.success('Votre compte a bien été créé. Veuillez vous connecter');
+            setRegisterForm(false);
           }
         });
       } else {
