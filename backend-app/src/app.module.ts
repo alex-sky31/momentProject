@@ -25,7 +25,7 @@ import { TaskModule } from './modules/tasks/task.module';
         migrationsTableName: 'migrations_typeorm',
         migrationsRun: true,
         entities: [User, Task],
-        synchronize: true, // false en production pour éviter les pertes de données accidentals
+        synchronize: true,
       }),
       inject: [ConfigService],
     }),

@@ -5,7 +5,7 @@ const base_url = 'http://localhost:8080';
 
 export const taskService = {
   async getTasks(userId: string) {
-    return axiosInstance.get(`${base_url}/tasks/${userId}`);
+    return axiosInstance.get(`${base_url}/tasks/user/${userId}`);
   },
   async getTask(id: string) {
     return axiosInstance.get(`${base_url}/tasks/${id}`);

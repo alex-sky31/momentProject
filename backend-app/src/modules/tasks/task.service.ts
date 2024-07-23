@@ -19,7 +19,8 @@ export class TaskService {
       relations: ['user'],
     });
   }
-  async findOne(id: string): Promise<Task> {
+
+  async getTaskById(id: string): Promise<Task> {
     return await this.taskRepository.findOne({ where: { id } });
   }
 

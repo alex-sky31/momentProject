@@ -12,6 +12,7 @@ import {
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth.guard';
 import { CreateUserDto } from './dto/createUser.dto';
+import { LoginUserDto } from './dto/loginUser.dto';
 
 @Controller('auth')
 export class AuthController {
@@ -19,7 +20,7 @@ export class AuthController {
   constructor(private readonly loginService: AuthService) {}
 
   @Post('/')
-  async login(@Body() dto: any) {
+  async login(@Body() dto: LoginUserDto) {
     this.logger.verbose(`Login user email ${dto.email}`);
     return this.loginService.login(dto);
   }

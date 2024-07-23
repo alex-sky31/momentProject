@@ -50,8 +50,13 @@ const TaskForm: React.FC<FormProps> = ({ taskId }) => {
 
   useEffect(() => {
     const fetchData = async (taskId: string) => {
-      const tmp = await taskService.getTask(taskId);
-      setTask(tmp.data);
+      await taskService
+        .getTask(taskId)
+        .then((res) => setTask(res.data))
+        .catch((e) => {
+          toast.error('Une erreur est survenu');
+          console.error(e);
+        });
     };
 
     if (taskId) {

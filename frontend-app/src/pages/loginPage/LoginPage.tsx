@@ -31,7 +31,11 @@ export const LoginPage = () => {
           }
         });
       } else {
-        await userService.login(values).then((res) => {
+        const data = {
+          email: values.email,
+          password: values.password
+        };
+        await userService.login(data).then((res) => {
           if (res.status === 201) {
             if (res.data?.code === 400) {
               toast.error('Email ou mots de passe invalide');

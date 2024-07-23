@@ -20,7 +20,7 @@ export class TaskController {
   constructor(private readonly taskService: TaskService) {}
 
   @UseGuards(AuthGuard)
-  @Get('/:userId')
+  @Get('/user/:userId')
   async getTasks(@Param('userId') userId: string) {
     this.logger.verbose(`Get all tasks`);
     return this.taskService.getTasks(userId);
@@ -30,7 +30,7 @@ export class TaskController {
   @Get('/:id')
   async getTaskById(@Param('id') id: string) {
     this.logger.verbose(`Get task ${id}`);
-    return this.taskService.findOne(id);
+    return this.taskService.getTaskById(id);
   }
 
   @UseGuards(AuthGuard)
