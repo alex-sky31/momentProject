@@ -4,19 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6ec4f30-bcf1-4737-83ba-7b799f9ffbcd" name="Changes" comment="fix(): dockerignore">
-      <change afterPath="$PROJECT_DIR$/backend-app/src/modules/auth/dto/loginUser.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+    <list default="true" id="a6ec4f30-bcf1-4737-83ba-7b799f9ffbcd" name="Changes" comment="feat(): add enum for clean">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend-app/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-app/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend-app/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-app/src/modules/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend-app/src/modules/auth/auth.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-app/src/modules/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend-app/src/modules/auth/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-app/src/modules/tasks/task.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend-app/src/modules/tasks/task.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-app/src/modules/tasks/task.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend-app/src/modules/tasks/task.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-app/src/API/task/Task.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-app/src/API/task/Task.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-app/src/pages/homePage/components/TaskForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-app/src/pages/homePage/components/TaskForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-app/src/pages/loginPage/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-app/src/pages/loginPage/LoginPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend-app/.env" beforeDir="false" afterPath="$PROJECT_DIR$/backend-app/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend-app/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend-app/src/app.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend-app/src/modules/auth/dto/createUser.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend-app/src/modules/auth/dto/createUser.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend-app/src/modules/users/user.controller.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend-app/src/modules/users/user.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend-app/src/modules/users/user.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +100,9 @@
       <workItem from="1721408509059" duration="32769000" />
       <workItem from="1721590200158" duration="3806000" />
       <workItem from="1721716214123" duration="800000" />
-      <workItem from="1721717119207" duration="1446000" />
+      <workItem from="1721717119207" duration="4126000" />
+      <workItem from="1721730819076" duration="325000" />
+      <workItem from="1721746252437" duration="2872000" />
     </task>
     <task id="LOCAL-00001" summary="feat(): fix front end&#10;&#10;add docker">
       <option name="closed" value="true" />
@@ -196,7 +192,39 @@
       <option name="project" value="LOCAL" />
       <updated>1721631129289</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fix(): clean code and add env file in repo fort test">
+      <option name="closed" value="true" />
+      <created>1721718601415</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1721718601415</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fix(): last clean and add last redirect">
+      <option name="closed" value="true" />
+      <created>1721718917355</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1721718917355</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat(): add general readme">
+      <option name="closed" value="true" />
+      <created>1721720512919</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1721720512919</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat(): add enum for clean">
+      <option name="closed" value="true" />
+      <created>1721731112561</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1721731112561</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +242,10 @@
     <MESSAGE value="fix(): path import update" />
     <MESSAGE value="feat(): password hash" />
     <MESSAGE value="fix(): dockerignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(): dockerignore" />
+    <MESSAGE value="fix(): clean code and add env file in repo fort test" />
+    <MESSAGE value="fix(): last clean and add last redirect" />
+    <MESSAGE value="feat(): add general readme" />
+    <MESSAGE value="feat(): add enum for clean" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(): add enum for clean" />
   </component>
 </project>
